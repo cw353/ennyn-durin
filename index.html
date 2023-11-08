@@ -9,17 +9,39 @@
 
   <!-- Styling -->
   <link rel="stylesheet" href="stylesheet.css"/>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
 
-  <div class='ennyn-durin'>
+  <div id='ennyn-durin'>
     <!--img src='doors_of_durin.png'/-->
-    <div class='password-div'>
+    <div id='password-div'>
       <p class='prompt'>Speak, Friend, and Enter</p>
-      <input type='password'/>
+      <input type='password' id='password-input'/>
     </div>
   </div>
+  <div id='moria'>
+    <p class='hobbiton'>TBD</p>
+  </div>
+
+  <script>
+    const sfx = new Audio('./OoT-MM_Secret_Jingle.ogg');
+    $('#password-input').on('change', function(e) {
+      const pw = e.target.value;
+      // if you can't figure out the password, check the code...
+      if (pw.toLowerCase() === 'mellon') {
+        sfx.play();
+        $('#ennyn-durin').fadeOut(1000, () => $('#moria').fadeIn(3000));
+      } else {
+        e.target.value = '';
+        window.alert("YOU SHALL NOT PASS!\n(wrong password)");
+      }
+    })
+  </script>
 
 </body>
 
