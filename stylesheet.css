@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Hobbiton-Brushhand";
   /* Font by Nancy Lorenz from https://web.archive.org/web/20030410033453/nancylorenz.com/lothlorien/fonts.html */
-  src: url('./hobbitonbrushhand.ttf') format("truetype");
+  src: url('resources/hobbitonbrushhand.ttf') format("truetype");
 }
 
 a.external::after {
@@ -23,7 +23,7 @@ html, body {
 
 #ennyn-durin {
   /* Modified from image by Zac at https://scifi.stackexchange.com/q/95264 (CC BY-SA 3.0 license) */
-  background-image: url('./ennyndurin.png');
+  background-image: url('resources/ennyndurin.png');
   background-color: #00008B;
 }
 

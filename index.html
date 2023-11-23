@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Speak Friend and Enter</title>
+  <title>Ennyn Durin</title>
   <meta name="author" content="Claire Wagner">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,16 +22,17 @@
   </div>
 
   <script>
-    const sfx = new Audio('secret.ogg');
+    const secret_sfx = new Audio('resources/secret.ogg');
+    const error_sfx = new Audio('resources/error.ogg');
     document.getElementById('password-input').addEventListener('change', (e) => {
       const pw = e.target.value;
       if (pw.toLowerCase() === 'mellon') {
-        sfx.play();
+        secret_sfx.play();
         setTimeout(() => {
           window.location.replace("https://cw353.github.io/portfolio/");
-        }, 3000);
+        }, 2000);
       } else {
-        e.target.value = '';
+        error_sfx.play();
         window.alert("YOU SHALL NOT PASS!\n(wrong password)");
       }
     })
