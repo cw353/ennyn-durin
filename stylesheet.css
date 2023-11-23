@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Hobbiton-Brushhand";
-  /* https://web.archive.org/web/20030410033453/nancylorenz.com/lothlorien/fonts.html */
+  /* Font by Nancy Lorenz from https://web.archive.org/web/20030410033453/nancylorenz.com/lothlorien/fonts.html */
   src: url('./hobbitonbrushhand.ttf') format("truetype");
 }
 
@@ -16,18 +16,15 @@ html, body {
   background-color: #00008B;
 }
 
-#ennyn-durin, #moria {
+#ennyn-durin {
   height: 100vh;
   width: 100%;
 }
 
 #ennyn-durin {
+  /* Modified from image by Zac at https://scifi.stackexchange.com/q/95264 (CC BY-SA 3.0 license) */
   background-image: url('./ennyndurin.png');
   background-color: #00008B;
-}
-
-#moria {
-  display: none;
 }
 
 #password-div {
@@ -38,12 +35,6 @@ html, body {
   align-items: center;
   justify-content: center;
   font-family: 'Hobbiton-Brushhand';
-}
-
-.hobbiton {
-  font-family: 'Hobbiton-Brushhand';
-  font-size: 10em;
-  color: #fc0;
 }
 
 #password-div .prompt {
