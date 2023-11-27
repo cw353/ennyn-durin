@@ -22,6 +22,7 @@
   </div>
 
   <script>
+    const redirect_url = 'https://cw353.github.io/';
     const secret_sfx = new Audio('resources/secret.ogg');
     const error_sfx = new Audio('resources/error.ogg');
     document.getElementById('password-input').addEventListener('change', (e) => {
@@ -29,11 +30,11 @@
       if (pw.toLowerCase() === 'mellon') {
         secret_sfx.play();
         setTimeout(() => {
-          window.location.replace("https://cw353.github.io/portfolio/");
+          window.location.replace(redirect_url);
         }, 2000);
       } else {
         error_sfx.play();
-        window.alert("YOU SHALL NOT PASS!\n(wrong password)");
+        window.alert('YOU SHALL NOT PASS!\n(wrong password)');
       }
     })
   </script>
