@@ -4,10 +4,10 @@
   src: url('resources/hobbitonbrushhand.ttf') format("truetype");
 }
 
-a.external::after {
-  /* Source: Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Link-external-small-ltr-progressive.svg (CC BY 4.0) */
-  content: url(https://upload.wikimedia.org/wikipedia/commons/9/96/Link-external-small-ltr-progressive.svg);
-  margin: 0px 0px 0px 5px;
+@font-face {
+  font-family: "Ringbearer";
+  /* Font by Pete Klassen from https://www.thehutt.de/tolkien/fonts.html */
+  src: url('resources/ringbearer/RINGM___.TTF') format("truetype");
 }
 
 html, body {
@@ -34,28 +34,45 @@ html, body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-family: 'Hobbiton-Brushhand';
 }
 
 #password-div .prompt {
-  color: darkgrey;
-  font-size: 7vw;
-  text-shadow: #fc0 1px 0px 25px, black 2px 0 10px;
-  margin: 5px;
+  font-family: 'Hobbiton-Brushhand';
+  font-size: 9vw;
+  margin-top: 0;
+  margin-bottom: 1.5vw;
 }
 
-input[type='password'] {
+#password-div {
+  color: darkgrey;
+  text-shadow: #fc0 1px 0px 25px, black 2px 0 10px;
+}
+
+#password-div label {
+  font-family: 'Ringbearer';
+  font-size: 5vw;
+}
+
+#password-div input {
   background-color: darkgrey;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0px 40px 3px #fc0, 0px 0px 40px 4px black;
-  width: 20vw;
-  height: 5vh;
-  color: #fc0;
+  width: 25vw;
+  height: 8vh;
+  color: #202020;
   font-size: 2em;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-family: 'Ringbearer';
+  font-size: 5vw;
 }
 
-input[type='password']:focus {
+#password-input {
+  font-style: italic;
+}
+
+#password-div input:focus {
   outline: 2px solid #fc0;
   border-radius: 3px; {
 }
